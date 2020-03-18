@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "rz-regular";
+  font-weight: normal;
+  src: url("rz-regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  /* font-weight: normal; */
+  src: url("HelveticaNowDisplay-Light.ttf");
+  font-display: swap;
+}

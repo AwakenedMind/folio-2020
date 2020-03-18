@@ -2,20 +2,31 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+// import Prism from "prismjs"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const code = `const foo = 'foo';
+  const bar = 'bar';
+  console.log(foo + bar);
+  `
+
+  // React.useEffect(() => {
+  //   // call the highlightAll() function to style our code blocks
+  //   Prism.highlightAll()
+  // })
+
+  {/* <div className="code-container">
+    <pre>
+      <code className="language-javascript">{code}</code>
+    </pre>
+  </div> */}
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+    </Layout >
+  )
+}
 
 export default IndexPage
