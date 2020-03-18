@@ -193,8 +193,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  /* font-family: rz-regular; */
-  font-family: Helvetica;
+  font-family: rz-regular;
+  /* font-family: Helvetica; */
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

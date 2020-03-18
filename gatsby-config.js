@@ -20,12 +20,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-postcss`,
+    //   options: {
+    //     postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -53,13 +53,11 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-sass'
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "fonts",
-    //     path: `${__dirname}/src/fonts/`
-    //   }
-    // }
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        useResolveUrlLoader: true,
+      },
+    },
   ],
 }
