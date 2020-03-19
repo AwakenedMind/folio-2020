@@ -1,0 +1,22 @@
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  position: fixed;
+  right: 3rem;
+  top: 50%;
+  font-size: 2em;
+  line-height: 1.5;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+.lightLink {
+  color: white;
+}
+
+.darkLink {
+  color: black;
+}

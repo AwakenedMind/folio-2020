@@ -1,0 +1,76 @@
+.landingSection {
+  height: 100%;
+  padding-top: 20rem;
+  position: relative;
+}
+
+.landingCopy {
+  font-size: 8em;
+  line-height: 1.75;
+  width: 85%;
+  margin: 0 auto;
+
+   p {
+     display: inline-block;
+     position: relative;
+     z-index: 2;
+
+     span {
+      content: '';
+      background: var(--primary-color);
+      border-bottom: 3rem solid var(--primary-color);
+      position: absolute;
+      bottom: 70px;
+      left: 1rem;
+      width: 100%;
+      z-index: -1;
+    }
+   }
+}
+
+
+.landingScrollWrapper {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+}
+
+.landingScroll {
+  position: relative;
+  margin: 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 2px;
+    left: 0;
+    top: 0;
+    background: black;
+  }
+}
+
+.projectSection {
+  padding-top: 10rem;
+  text-align: right;
+  padding-right: 7.75em;
+
+  .projectTitleWrapper {
+    padding-bottom: 4rem;
+    
+    h2 {
+      font-size: 8em;
+      position: relative;
+  
+  
+      &:after {
+        background: black;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+      }
+    }
+  }
+}

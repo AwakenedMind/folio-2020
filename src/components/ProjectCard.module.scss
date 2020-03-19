@@ -1,0 +1,38 @@
+.projectCard {
+  width: 100%;
+  display: flex;
+
+  .imageWrapper {
+
+    img {
+
+    }
+  }
+
+  .projectDescriptionWrapper {
+    .projectDescriptionContent {
+      max-width: 40rem;
+      .projectDescriptionTitleWrapper {
+        div {
+
+        }
+
+        h3 {
+          text-transform: uppercase;
+          text-align: left;
+
+        }
+      }
+
+      p {
+
+      }
+
+      ul {
+        li {
+
+        }
+      }
+    }
+  }
+}
