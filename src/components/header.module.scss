@@ -5,23 +5,29 @@
   display: flex;
   
   div {
-    h1 {
-      margin-left: 3rem !important;
-      margin-top: 2rem !important;
-      font-size: 1.5rem;
-      margin: 0;
-      position: relative;
-      text-decoration: overline;
 
-      // &:after {
-      //   content: '';
-      //   background: teal;
-      //   height: 10px;
-      //   width: 100%;
-      //   position: absolute;
-      //   bottom: 5px;
-      //   left: 0;
-      // }
+    div {
+      position: relative;
+
+      h1 {
+        margin-left: 3rem !important;
+        margin-top: 2rem !important;
+        font-size: 1.5rem;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+      }
+      
+      span {
+        content: '';
+        background: var(--primary-color);
+        border-bottom: 12px solid var(--primary-color);
+        position: absolute;
+        bottom: -1px;
+        left: 2.9rem;
+        width: 12rem;
+        z-index: 1;
+      }
     }
   }
 

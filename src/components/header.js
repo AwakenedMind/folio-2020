@@ -6,7 +6,10 @@ import styles from './Header.module.scss'
 const Header = () => (
   <header className={styles.header}>
     <div>
-      <h1>Robert Arteaga</h1>
+      <div>
+        <h1>Robert Arteaga</h1>
+        <span></span>
+      </div>
     </div>
     <nav>
       <Link to="#Projects">

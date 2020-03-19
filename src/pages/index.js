@@ -1,9 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Header from '../components/Header';
 // import Prism from "prismjs"
 
 const IndexPage = () => {
@@ -25,7 +22,6 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Header />
       <SEO title="Home" />
     </Layout >
   )
