@@ -2,10 +2,12 @@
   width: 100%;
   display: flex;
 
-  .imageWrapper {
+  .projectImageWrapper {
+    max-width: 60%;
 
     img {
-
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
     }
   }
 
@@ -13,14 +15,19 @@
     .projectDescriptionContent {
       max-width: 40rem;
       .projectDescriptionTitleWrapper {
-        div {
+        display: inline-flex;
+        width: 100%;
 
+        div {
+          display: inline-block;
+          flex-grow: 2;
+          text-align: center;
+          font-size: 0.8em;
         }
 
         h3 {
           text-transform: uppercase;
           text-align: left;
-
         }
       }
 

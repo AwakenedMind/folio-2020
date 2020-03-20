@@ -3,6 +3,8 @@ import styles from './ProjectCard.module.scss';
 import DestroyGames from '../images/destroygames.png'
 import DevSound from '../images/devsound.png'
 import CrownStudio from '../images/crownstudio.png'
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from "gatsby"
 
 const ProjectCard = () => {
 
@@ -31,11 +33,25 @@ const ProjectCard = () => {
     }
   ]
 
+  const data = useStaticQuery(graphql`
+    query {
+      crownstudio: file(relativePath: { eq: "crownstudio.png" }) {
+      childImageSharp {
+      fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }`
+  )
+
   return (
     <div className={styles.projectCard}>
-      <div className={styles.projectImageWrapper}>
+      {/* <div className={styles.projectImageWrapper}>
         <img className={styles.projectImage} src={DevSound} />
-      </div>
+      </div> */}
+      {console.log(data)}
+      <Img fluid={data.crownstudio.childImageSharp.fluid} />
       <div className={styles.projectDescriptionWrapper}>
         <div className={styles.projectDescriptionContent}>
           <div className={styles.projectDescriptionTitleWrapper}>
