@@ -1,17 +1,25 @@
 .projectCard {
   width: 100%;
   display: flex;
+  margin-bottom: 4rem;
 
   .projectImageWrapper {
-    max-width: 60%;
+    width: 100%;
+    padding: 1rem;
+    background: black;
+    max-width: 50rem;
 
     img {
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      -webkit-filter: grayscale(100%); 
       filter: grayscale(100%);
+      margin: 0;
     }
   }
 
   .projectDescriptionWrapper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    width: 100%;
     .projectDescriptionContent {
       max-width: 40rem;
       .projectDescriptionTitleWrapper {
@@ -32,10 +40,17 @@
       }
 
       p {
-
+        line-height: 1.5;
+        margin: 0;
+        padding-bottom: 3rem;
       }
 
       ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         li {
 
         }

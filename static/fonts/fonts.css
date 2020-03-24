@@ -18,3 +18,31 @@
   src: url("HelveticaNowDisplay-ExtLt.ttf");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Varta";
+  font-weight: 300;
+  src: url("Varta-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Varta";
+  font-weight: 400;
+  src: url("Varta-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Varta";
+  font-weight: 600;
+  src: url("Varta-SemiBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Varta";
+  font-weight: 700;
+  src: url("Varta-Bold.ttf");
+  font-display: swap;
+}

@@ -1,37 +1,59 @@
-import React from "react"
-import Layout from "../components/layout"
+import React, { useState } from "react"
 import SEO from "../components/seo"
 import styles from '../components/Index.module.scss'
 import LandingScroll from '../images/landing-scroll.svg'
 import SocialLinks from '../components/SocialLinks'
 import ProjectCard from '../components/ProjectCard'
-import Img from 'gatsby-image'
-// import Prism from "prismjs"
+import { graphql } from 'gatsby'
+import DestroyGames from '../images/destroygames.png'
+import DevSound from '../images/devsound.png'
+import CrownStudio from '../images/crownstudio.png'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Header from '../components/Header'
+import { Location } from '@reach/router'
 
-const IndexPage = ({ data }) => {
+import "../components/layout.css"
+const IndexPage = (props) => {
 
+
+  // const projects = [
+  //   {
+  //     title: "DestroyGames",
+  //     date: "Feb 19' - Current",
+  //     description: "DestroyGames.com is a gaming platform for playing .io games (popular multiplayer browser games). Players can easily visit the site and find their next favorite game.",
+  //     stack: ["ReactJS", "GatsbyJS", "Styled Components", "Contentful", "Firebase", "Netlify Auth", "Jest", "CircleCI"],
+  //     image: data.destroygames.childImageSharp.fluid
+  //   },
+  //   {
+  //     title: "CrownStudio",
+  //     date: "Sept 19'",
+  //     description: "CrownStudio is a digital agency mockup wireframed in Figma based in Brisbane, Au. The landing page is built with industry standard web design & UI/UX trends.",
+  //     stack: ["ReactJS", "Javascript", "HTML5", "CSS3", "Sass"],
+  //     image: data.crownstudio.childImageSharp.fluid
+  //   },
+  //   {
+  //     title: "DevSound(WIP)",
+  //     date: "February 20' - Current",
+  //     description: "DevSound is a fullstack application that uses SpotifyAPI to connect developers through music",
+  //     stack: ["Create-React-App", "NodeJS", "HTML5", "CSS Modules"],
+  //     image: data.devsound.childImageSharp.fluid
+  //   }
+  // ]
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <section className={styles.landingSection}>
-        <div className={styles.landingScrollWrapper}>
-          <img src={LandingScroll} className={styles.landingScroll} />
-        </div>
-        <p className={styles.landingCopy}>a frontend developer and designer looking for a role developing sites using <p className={styles.landingCopyReact}>ReactJS<span></span></p>
-        </p>
-        <SocialLinks text="black" />
-      </section>
-      <section className={styles.projectSection}>
-        <div className={styles.projectTitleWrapper}>
-          <h2>Projects</h2>
+    <main className={styles.main}>
+      <Header route={props.location.pathname} />
+      <div className={styles.verticalLine}></div>
+      <div className={styles.horizontalLine}></div>
+      <section className={styles.leftContent}>
+        <div className={styles.titleWrapper}>
+          <div className={styles.titleName}>name</div>
+          <h1 className={styles.title}>Robert arteaga</h1>
+          <h4 className={styles.subTitle}>Lets Work Together</h4>
         </div>
       </section>
-      {console.log(data)}
-      <ProjectCard images={data} />
-
-      {/* <Img fluid={data.crownstudio.childImageSharp.fluid} /> */}
-    </Layout >
+      {console.log(props)}
+    </main>
   )
 }
 
@@ -39,6 +61,15 @@ export default IndexPage
 
 export const query = graphql`
   query {
+
+    dev:file(relativePath: { eq: "crownstudio.png" }) {
+      childImageSharp {
+      fixed(width: 200, height: 200) {
+        ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      }
+    }    
+  }
+
     crownstudio: file(relativePath: { eq: "crownstudio.png" }) {
       ...projectImage
     }
@@ -56,29 +87,9 @@ export const query = graphql`
 export const projectImage = graphql`
   fragment projectImage on File {
     childImageSharp {
-      fixed(width: 200, height: 200) {
-        ...GatsbyImageSharpFixed
+      fluid(maxHeight: 400) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
 `
-
-
-
-
-
-// const code = `const foo = 'foo';
-// const bar = 'bar';
-// console.log(foo + bar);
-// `
-
-// React.useEffect(() => {
-//   // call the highlightAll() function to style our code blocks
-//   Prism.highlightAll()
-// })
-
-{/* <div className="code-container">
-    <pre>
-      <code className="language-javascript">{code}</code>
-    </pre>
-  </div> */}

@@ -1,6 +1,11 @@
 
 :root {
-  --primary-color: #9EF9FF;
+  --primary: #730202;
+  --title-gray: rgba(0, 0, 0, 0.28);
+  --darkgray: #4b4b4b;
+  --title-spacing: 12px;
+  --title-height: 1.4;
+
 }
 
 html {
@@ -198,7 +203,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: rz-regular;
+  font-family: "Varta", rz-regular;
   /* font-family: Helvetica; */
   font-weight: normal;
   word-wrap: break-word;

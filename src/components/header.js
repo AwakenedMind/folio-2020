@@ -2,24 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from './Header.module.scss'
+import { Location } from '@reach/router'
 
-const Header = () => (
+const Header = (props) => (
   <header className={styles.header}>
-    <div>
-      <div>
-        <h1>Robert Arteaga</h1>
-        <span></span>
-      </div>
-    </div>
-    <nav>
-      <Link to="#Projects">
-        Projects
-      </Link>
-      <Link to="#Projects">
-        Reach Out
-      </Link>
-      {/* <div>Projects</div> */}
-    </nav>
+    {/* {props.route === "/" ? <Link to={props.route}>Projects</Link> : <Link to="/">Home</Link>} */}
+    <h3>Work</h3>
   </header>
 )
 
