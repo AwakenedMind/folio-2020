@@ -6,11 +6,29 @@
   list-style-type: none;
   position: fixed;
   right: 2rem;
-  top: 50%;
+  top: 80%;
   font-size: 1.5em;
   line-height: 1.5;
   font-family: Helvetica;
   font-weight: 300;
+  text-align: right;
+  color: var(--darkgray);
+  text-transform: uppercase;
+  text-decoration: none;
+  
+
+
+  li {
+    color: var(--darkgray);
+    text-align: right;
+
+    a {
+      color: var(--darkgray);
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 0.8em;
+    }
+  }
 }
 
 .lightLink {

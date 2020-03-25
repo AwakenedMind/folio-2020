@@ -1,0 +1,27 @@
+.projectWrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+
+  .project {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .projectContent {
+      height: 100%;
+      width: 100%;
+      .imageWrapper {
+        width: 80%;
+      }
+    }
+
+  }
+      .project:nth-child(2) {
+        border-left: 1px solid #CAC6CF;
+        border-right: 1px solid #CAC6CF;
+      }
+}

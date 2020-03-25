@@ -5,9 +5,9 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 const SocialLinks = (props) => {
 
   var links = [
-    { endpoint: 'githublink', text: "git" },
-    { endpoint: "linkedin", text: "lin" },
-    { endpoint: "https://codepen.io/chantel-sky/pens/showcase", text: "twi" }
+    { endpoint: 'githublink', text: "Github" },
+    { endpoint: "linkedin", text: "LinkedIn" },
+    { endpoint: "https://codepen.io/chantel-sky/pens/showcase", text: "Twitter" }
   ];
 
   const lightLink = (link) => {

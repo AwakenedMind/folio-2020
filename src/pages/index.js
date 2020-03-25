@@ -11,8 +11,10 @@ import CrownStudio from '../images/crownstudio.png'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Header from '../components/Header'
 import { Location } from '@reach/router'
-
+import Img from 'gatsby-image'
 import "../components/layout.css"
+import Folio from '../images/folio-img.png'
+
 const IndexPage = (props) => {
 
 
@@ -51,7 +53,16 @@ const IndexPage = (props) => {
           <h1 className={styles.title}>Robert arteaga</h1>
           <h4 className={styles.subTitle}>Lets Work Together</h4>
         </div>
+        <h5 className={styles.availForHire}>Available For Hire</h5>
       </section>
+      <section className={styles.rightContent}>
+        <img src={Folio} />
+        <div className={styles.occupationWrapper}>
+          <div className={styles.occupationTitle}>Occupation</div>
+          <div className={styles.occupation}>Frontend Developer & Designer</div>
+        </div>
+      </section>
+      <SocialLinks />
       {console.log(props)}
     </main>
   )
@@ -81,7 +92,16 @@ export const query = graphql`
     devsound: file(relativePath: { eq: "devsound.png" }) {
       ...projectImage
     }
+
+    folio: file(relativePath: { eq: "folio-img.png" }) {
+      childImageSharp {
+      fixed(width: 500, height: 500) {
+        ...GatsbyImageSharpFixed_withWebp
+      }
+    }     
   }
+
+}
 `
 
 export const projectImage = graphql`

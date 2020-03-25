@@ -3,6 +3,13 @@
   background: white;
   height: 5rem;
   display: flex;
+  position: fixed;
+
+  h3 {
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
   
   div {
 
