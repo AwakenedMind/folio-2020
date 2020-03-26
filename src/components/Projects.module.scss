@@ -4,18 +4,59 @@
   display: flex;
   flex-wrap: nowrap;
   position: relative;
+  padding: 8rem;
+
+  .projectTitle {
+    color: var(--primary);
+    position: absolute;
+    bottom: 5%;
+    font-size: 6em;
+    width: 100%;
+    text-align: center;
+  }
 
   .project {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
     .projectContent {
-      height: 100%;
+      height: initial;
       width: 100%;
+      position: relative;
+
+      h2 {
+        text-align: center;
+        color: var(--darkgray);
+        font-weight: 300;
+        padding-top: 2rem;
+        font-size: 1.7em;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+
+      
       .imageWrapper {
-        width: 80%;
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+          border: 6px solid  #CAC6CF;
+        }
+
+              .projectNumber {
+                font-size: 5em;
+                color: var(--primary);
+                position: absolute;
+                left: 10%;
+                top: 0;
+                letter-spacing: 8px;
+        
+              }
       }
     }
 

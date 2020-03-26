@@ -13,7 +13,7 @@ import Header from '../components/Header'
 import { Location } from '@reach/router'
 import Img from 'gatsby-image'
 import "../components/layout.css"
-import Folio from '../images/folio-img.png'
+import Layout from '../components/Layout';
 
 const IndexPage = (props) => {
 
@@ -41,30 +41,40 @@ const IndexPage = (props) => {
   //     image: data.devsound.childImageSharp.fluid
   //   }
   // ]
+  console.log(props)
 
   return (
-    <main className={styles.main}>
-      <Header route={props.location.pathname} />
-      <div className={styles.verticalLine}></div>
-      <div className={styles.horizontalLine}></div>
-      <section className={styles.leftContent}>
-        <div className={styles.titleWrapper}>
-          <div className={styles.titleName}>name</div>
-          <h1 className={styles.title}>Robert arteaga</h1>
-          <h4 className={styles.subTitle}>Lets Work Together</h4>
-        </div>
-        <h5 className={styles.availForHire}>Available For Hire</h5>
-      </section>
-      <section className={styles.rightContent}>
-        <img src={Folio} />
-        <div className={styles.occupationWrapper}>
-          <div className={styles.occupationTitle}>Occupation</div>
-          <div className={styles.occupation}>Frontend Developer & Designer</div>
-        </div>
-      </section>
-      <SocialLinks />
-      {console.log(props)}
-    </main>
+    <Layout
+      path={props.location.pathName}
+      leftTitleName={"Name"}
+      leftTitle={"Robert Arteaga"}
+      leftSubTitle={"Lets Work Together?"}
+      rightTitleName={"Occupation"}
+      rightTitle={"Frontend Developer & Designer"}
+    />
+
+    // <main className={styles.main}>
+    //   <Header route={props.location.pathname} />
+    //   <div className={styles.verticalLine}></div>
+    //   <div className={styles.horizontalLine}></div>
+    //   <section className={styles.leftContent}>
+    //     <div className={styles.titleWrapper}>
+    //       <div className={styles.titleName}>name</div>
+    //       <h1 className={styles.title}>Robert arteaga</h1>
+    //       <h4 className={styles.subTitle}>Lets Work Together</h4>
+    //     </div>
+    //     <h5 className={styles.availForHire}>Available For Hire</h5>
+    //   </section>
+    //   <section className={styles.rightContent}>
+    //     <img src={Folio} />
+    //     <div className={styles.occupationWrapper}>
+    //       <div className={styles.occupationTitle}>Occupation</div>
+    //       <div className={styles.occupation}>Frontend Developer & Designer</div>
+    //     </div>
+    //   </section>
+    //   <SocialLinks />
+    //   {console.log(props)}
+    // </main>
   )
 }
 
@@ -107,8 +117,8 @@ export const query = graphql`
 export const projectImage = graphql`
   fragment projectImage on File {
     childImageSharp {
-      fluid(maxHeight: 400) {
-        ...GatsbyImageSharpFluid
+      fixed(height: 400, width: 300) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

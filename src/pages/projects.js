@@ -3,30 +3,42 @@ import { graphql } from 'gatsby'
 import styles from '../components/Projects.module.scss'
 import Img from 'gatsby-image'
 
+/*
+  bookmark october 11 2019
+  crown october 15 2019
+*/
+
 const Projects = (props) => {
   return (
     <div className={styles.projectWrapper}>
       <div className={styles.project}>
         <div className={styles.projectContent}>
           <div className={styles.imageWrapper}>
-            <Img fluid={props.data.devsound.childImageSharp.fluid} />
+            <Img fixed={props.data.destroygames.childImageSharp.fixed} />
+            <div className={styles.projectNumber}>01</div>
           </div>
+          <h2>DestroyGames</h2>
         </div>
       </div>
       <div className={styles.project}>
         <div className={styles.projectContent}>
           <div className={styles.imageWrapper}>
-            <Img fluid={props.data.devsound.childImageSharp.fluid} />
+            <Img fixed={props.data.devsound.childImageSharp.fixed} />
+            <div className={styles.projectNumber}>02</div>
           </div>
+          <h2>Devsound</h2>
         </div>
       </div>
       <div className={styles.project}>
         <div className={styles.projectContent}>
           <div className={styles.imageWrapper}>
-            <Img fluid={props.data.devsound.childImageSharp.fluid} />
+            <Img fixed={props.data.crownstudio.childImageSharp.fixed} />
+            <div className={styles.projectNumber}>03</div>
           </div>
+          <h2>CrownStudio</h2>
         </div>
       </div>
+      <h1 className={styles.projectTitle}>Projects</h1>
     </div>
   )
 }

@@ -1,14 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../components/Layout';
 
-const Project = (props, { data }) => {
-  const dev = "devsound.png"
+const Project = props => {
   return (
-    <div>
-      Project Template
-      {console.log(props)}
-      {console.log(data)}
-    </div>
+    <Layout
+      path={props.location.pathName}
+      leftTitleName={"Name"}
+      leftTitle={"Robert Arteaga"}
+      leftSubTitle={"Lets Work Together?"}
+      rightTitleName={"Occupation"}
+      rightTitle={"Frontend Developer & Designer"}
+    />
   )
 }
 
