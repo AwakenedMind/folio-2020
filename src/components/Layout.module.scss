@@ -163,7 +163,10 @@
   }
 
    .occupationWrapper {
-     top: 70%;
+    position: absolute;
+    top: 50% !important;
+    left: -95% !important;
+    max-width: 15rem;   
    }
 
    .main {
@@ -201,14 +204,23 @@
          left: 10%;
          position: absolute;
        }
+       .occupationWrapper {
+        position: absolute;
+        top: 50%;
+        left: -95%;
+        max-width: 15rem;
+
+        .occupationTitle {
+          font-size: 0.8em;
+
+         }
+         .occupation {
+          letter-spacing: 0;
+         }
+       }
      }
    }
   
-   .occupationWrapper {
-     position: absolute;
-     top: 70%;
-     left: -25%;
-   }
 
    .main {
      .leftContent {
