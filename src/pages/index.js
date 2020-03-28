@@ -51,6 +51,7 @@ const IndexPage = (props) => {
       leftSubTitle={"Lets Work Together?"}
       rightTitleName={"Occupation"}
       rightTitle={"Frontend Developer & Designer"}
+      image={props.data.folio.childImageSharp.fluid}
     />
 
     // <main className={styles.main}>
@@ -105,8 +106,8 @@ export const query = graphql`
 
     folio: file(relativePath: { eq: "folio-img.png" }) {
       childImageSharp {
-      fixed(width: 500, height: 500) {
-        ...GatsbyImageSharpFixed_withWebp
+      fluid {
+        ...GatsbyImageSharpFluid_withWebp
       }
     }     
   }

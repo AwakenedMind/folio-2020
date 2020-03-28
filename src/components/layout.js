@@ -19,7 +19,9 @@ const Layout = (props) => {
         <h5 className={styles.availForHire}>Available For Hire</h5>
       </section>
       <section className={styles.rightContent}>
-        <img src={Folio} />
+        <div className={styles.imageWrapper}>
+          <img src={Folio} />
+        </div>
         <div className={styles.occupationWrapper}>
           <div className={styles.occupationTitle}>{props.rightTitleName}</div>
           <div className={styles.occupation}>{props.rightTitle}</div>

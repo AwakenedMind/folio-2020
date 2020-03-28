@@ -1,8 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout';
+import { Location } from '@reach/router'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Project = props => {
+  console.log(props)
   return (
     <Layout
       path={props.location.pathName}
@@ -11,6 +14,7 @@ const Project = props => {
       leftSubTitle={"Lets Work Together?"}
       rightTitleName={"Occupation"}
       rightTitle={"Frontend Developer & Designer"}
+    // image={}
     />
   )
 }

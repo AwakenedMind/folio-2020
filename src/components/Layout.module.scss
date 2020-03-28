@@ -1,3 +1,4 @@
+
 .landingSection {
   height: 100%;
   padding-top: 20rem;
@@ -43,7 +44,7 @@
     width: 50%;
     height: 100%;
 
-    img {
+    .imageWrapper {
       position: absolute;
       left: 20%;
       top: 20%;
@@ -122,5 +123,242 @@
 }
 
 
+
+/**
+ * Basic CSS Media Query Template
+ * TODO: I should probably use Sass...
+ * Author: Michael Vieth
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet 
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+
+ @media all and (min-width: 1280px) and (max-width: 1440px) { 
+  .main {
+    .rightContent {
+      .imageWrapper {
+        max-width: 300px;
+        top: 30%;
+      }
+    }
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+ }
+
+ @media all and (min-width: 1024px) and (max-width: 1279px) {
+  .main {
+    .rightContent {
+        .imageWrapper {
+          max-width: 300px;
+          top: 30%;
+        }
+    }
+  }
+
+   .occupationWrapper {
+     top: 70%;
+   }
+
+   .main {
+    .leftContent {
+     .titleWrapper {
+       .title {
+        font-size: 3rem;
+      }
+     }
+   }
+  }
+
+  }
+
+ @media all and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    .leftContent {
+     .titleWrapper {
+       right: -30% !important;
+       left: 5%;
+       z-index: 2;
+
+       .title {
+        font-size: 2.5rem;
+      }
+     }
+   }
+  }
+   .main {
+     .rightContent {
+       
+       .imageWrapper {
+         max-width: 300px;
+         top: 30%;
+         left: 10%;
+         position: absolute;
+       }
+     }
+   }
+  
+   .occupationWrapper {
+     position: absolute;
+     top: 70%;
+     left: -25%;
+   }
+
+   .main {
+     .leftContent {
+      .titleWrapper {
+        .title {
+         font-size: 3rem;
+       }
+      }
+    }
+   }
+  }
+
+ 
+ @media all and (min-width: 480px) and (max-width: 767px) {
+  .main {
+    .leftContent {
+     .titleWrapper {
+       right: -50% !important;
+       z-index: 2;
+
+       .title {
+        font-size: 2rem;
+        letter-spacing: var(--mobile-title-spacing);
+      }
+      .titleName {
+        font-size: 0.8em;
+      }
+     }
+   }
+  }
+   .main {
+     .rightContent {
+       
+       .imageWrapper {
+         max-width: 300px;
+         top: 30%;
+         left: 10%;
+         position: absolute;
+       }
+     }
+   }
+
+   .main {
+     .rightContent {
+       .occupationWrapper {
+          position: absolute;
+          top: 50%;
+          left: -95%;
+          max-width: 15rem;
+    
+         .occupationTitle {
+          font-size: 0.8em;
+
+         }
+         .occupation {
+          letter-spacing: 0;
+         }
+       }
+     }
+   }
+  }
+ 
+ @media all and (max-width: 480px) { 
+  .main {
+    .verticalLine {
+      height: 80%;
+    }
+    .leftContent {
+     .titleWrapper {
+       right: -50% !important;
+       z-index: 2;
+       left: 5%;
+
+       .title {
+        font-size: 2rem;
+        letter-spacing: var(--mobile-title-spacing);
+      }
+      .titleName {
+        font-size: 0.8em;
+      }
+     }
+   }
+  }
+   .main {
+     .rightContent {
+       
+       .imageWrapper {
+         max-width: 300px;
+         width: 150px;
+         top: 30%;
+         left: 10%;
+         position: absolute;
+       }
+     }
+   }
+
+   .main {
+     .rightContent {
+       .occupationWrapper {
+          position: absolute;
+          top: 50%;
+          left: -95%;
+          max-width: 15rem;
+    
+         .occupationTitle {
+          font-size: 0.8em;
+
+         }
+         .occupation {
+          letter-spacing: 0;
+         }
+       }
+     }
+   }
+ }
+ 
+ 
+ /* Portrait */
+ @media screen and (orientation:portrait) { /* Portrait styles here */ }
+ /* Landscape */
+ @media screen and (orientation:landscape) { /* Landscape styles here */ }
+ 
+ 
+ /* CSS for iPhone, iPad, and Retina Displays */
+ 
+ /* Non-Retina */
+ @media screen and (-webkit-max-device-pixel-ratio: 1) {
+ }
+ 
+ /* Retina */
+ @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+ only screen and (-o-min-device-pixel-ratio: 3/2),
+ only screen and (min--moz-device-pixel-ratio: 1.5),
+ only screen and (min-device-pixel-ratio: 1.5) {
+ }
+ 
+ /* iPhone Portrait */
+ @media screen and (max-device-width: 480px) and (orientation:portrait) {
+ } 
+ 
+ /* iPhone Landscape */
+ @media screen and (max-device-width: 480px) and (orientation:landscape) {
+ }
+ 
+ /* iPad Portrait */
+ @media screen and (min-device-width: 481px) and (orientation:portrait) {
+ }
+ 
+ /* iPad Landscape */
+ @media screen and (min-device-width: 481px) and (orientation:landscape) {
+ }
 
 
