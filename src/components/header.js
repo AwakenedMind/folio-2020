@@ -11,7 +11,7 @@ const Header = (props) => {
 
       {/* {props.route === "/" ? <AniLink to={props.location.pathName} cover bg="blue" duration={0.7}>Projects</AniLink> : <AniLink to="/">Home</AniLink>} */}
 
-      {props.route === "/" ? <Link to={props.route} cover bg="blue" duration={0.7}>Projects</Link> : <Link to="/">Home</Link>}
+      {props.route === "/" ? <Link to={props.route}>Projects</Link> : <Link to="/">Home</Link>}
 
       {/* <AniLink to={"/projects/"} cover bg="blue" duration={0.7}>Home</AniLink> */}
 
