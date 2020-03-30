@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Robert Arteaga | Freelance Web Developer in the Greater Los Angeles Area  `,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Robert Arteaga | Freelance ReactJS Web Developer in the Greater Los Angeles Area  `,
+    description: `Robert Arteaga is an accredited HTML5 Engineer with superb ReactJS Skills. With hundreds of referrals from around the world. His freelance rate starts at 10k USD. `,
     author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -41,7 +42,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["rz-regular", "Helvetica"],
+          families: ["rz-regular", "Helvetica", "Varta"],
           urls: ["/fonts/fonts.css"],
         },
       },

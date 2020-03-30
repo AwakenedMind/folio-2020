@@ -1,3 +1,4 @@
+
 .landingSection {
   height: 100%;
   padding-top: 20rem;
@@ -43,15 +44,21 @@
     width: 50%;
     height: 100%;
 
-    img {
+    .imageWrapper {
+      max-width: 500px;
+      width: 500px;
       position: absolute;
       left: 20%;
       top: 20%;
+
+      img {
+        border: 3px solid var(--primary);
+      }
     }
 
     .occupationWrapper {
       position: absolute;
-      top: 80%;
+      top: 50%;
       left: -5%;
       max-width: 20rem;
 
@@ -63,11 +70,22 @@
       }
 
       .occupation {
-        text-transform: uppercase;
-        letter-spacing: 7px;
-
+        line-height: 1.5;
       }
     }
+
+    .techstackTitle {
+      letter-spacing: var(--title-spacing);
+      text-transform: uppercase;
+    }
+
+    .techstack {
+      position: absolute;
+      bottom: 20%;
+      right: 50%;
+      list-style-type: none;
+    }
+
   }
 
   .leftContent {
@@ -123,88 +141,6 @@
 
 
 
-
-
-.landingCopy {
-  font-size: 8em;
-  line-height: 1.75;
-  width: 85%;
-  margin: 0 auto;
-
-   div {
-     display: inline-block;
-     position: relative;
-     z-index: 2;
-
-     div {
-      display: inline-block;
-     }
-
-     span {
-      content: '';
-      background: var(--primary-color);
-      border-bottom: 3rem solid var(--primary-color);
-      position: absolute;
-      bottom: 70px;
-      left: 1rem;
-      width: 100%;
-      z-index: -1;
-    }
-   }
-}
-
-
-.landingScrollWrapper {
-  position: absolute;
-  left: 2rem;
-  top: 50%;
-}
-
-.landingScroll {
-  position: relative;
-  margin: 0;
-
-  &:after {
-    content: '';
-    position: absolute;
-    height: 100px;
-    width: 2px;
-    left: 0;
-    top: 0;
-    background: black;
-  }
-}
-
-.projectSection {
-  padding-top: 10rem;
-  text-align: right;
-  padding-right: 7.75em;
-  padding-bottom: 8rem;
-
-  .projectTitleWrapper {
-    padding-bottom: 4rem;
-    
-    h2 {
-      font-size: 8em;
-      position: relative;
-  
-  
-      // &:after {
-      //   background: black;
-      //   content: '';
-      //   position: absolute;
-      //   width: 100%;
-      //   height: 2px;
-      //   left: 0;
-      // }
-    }
-  }
-}
-
-
-
-
-
 /**
  * Basic CSS Media Query Template
  * TODO: I should probably use Sass...
@@ -219,55 +155,206 @@
  */
 
  @media all and (min-width: 1280px) and (max-width: 1440px) { 
-  .imageWrapper {
-    max-width: 300px;
-    top: 30%;
+  .main {
+    .rightContent {
+      .imageWrapper {
+        max-width: 300px;
+        top: 30%;
+      }
+    }
   }
+
   .title {
     font-size: 3rem;
   }
  }
 
  @media all and (min-width: 1024px) and (max-width: 1279px) {
-  .imageWrapper {
-    max-width: 300px;
-    top: 30%;
+  .main {
+    .rightContent {
+        .imageWrapper {
+          max-width: 300px;
+          top: 30%;
+        }
+        
+        .occupationWrapper {
+         position: absolute;
+         top: 50% !important;
+         left: -55% !important;
+         max-width: 15rem;   
+        }
+    }
   }
 
-   .occupationWrapper {
-     top: 70%;
+
+   .main {
+    .leftContent {
+     .titleWrapper {
+       .title {
+        font-size: 3rem;
+      }
+     }
    }
-   .title {
-    font-size: 3rem;
   }
 
   }
 
  @media all and (min-width: 768px) and (max-width: 1023px) {
-   .title {
-     font-size: 2rem;
-     z-index: 1;
+  .main {
+    .leftContent {
+     .titleWrapper {
+       right: -30% !important;
+       left: 5%;
+       z-index: 2;
+
+       .title {
+        font-size: 2.5rem;
+      }
+     }
    }
-  .imageWrapper {
-    max-width: 300px !important;
-    top: 30% !important;
-    left: 10% !important;
   }
+   .main {
+     .rightContent {
+       
+       .imageWrapper {
+         width: 300px;
+         top: 30%;
+         left: 10%;
+         position: absolute;
+       }
+       
+       .occupationWrapper {
+        position: absolute;
+        top: 50%;
+        left: -95%;
+        max-width: 15rem;
+
+        .occupationTitle {
+          font-size: 0.8em;
+
+         }
+         .occupation {
+          letter-spacing: 0;
+         }
+       }
+     }
+   }
   
-   .occupationWrapper {
-     position: absolute;
-     top: 70%;
-     left: -25%;
+
+   .main {
+     .leftContent {
+      .titleWrapper {
+        .title {
+         font-size: 3rem;
+       }
+      }
+    }
    }
-   .title {
-    font-size: 3rem;
-  }
   }
 
  
- @media all and (min-width: 480px) and (max-width: 767px) { }
+ @media all and (min-width: 480px) and (max-width: 767px) {
+  .main {
+    .leftContent {
+     .titleWrapper {
+       right: -50% !important;
+       z-index: 2;
+
+       .title {
+        font-size: 2rem;
+        letter-spacing: var(--mobile-title-spacing);
+      }
+      .titleName {
+        font-size: 0.8em;
+      }
+     }
+   }
+  }
+   .main {
+     .rightContent {
+       
+       .imageWrapper {
+         max-width: 300px;
+         top: 30%;
+         left: 10%;
+         position: absolute;
+       }
+     }
+   }
+
+   .main {
+     .rightContent {
+       .occupationWrapper {
+          position: absolute;
+          top: 50%;
+          left: -95%;
+          max-width: 15rem;
+    
+         .occupationTitle {
+          font-size: 0.8em;
+
+         }
+         .occupation {
+          letter-spacing: 0;
+         }
+       }
+     }
+   }
+  }
  
- @media all and (max-width: 480px) { }
+ @media all and (max-width: 480px) { 
+  .main {
+    .verticalLine {
+      height: 80%;
+    }
+    .leftContent {
+     .titleWrapper {
+       right: -50% !important;
+       z-index: 2;
+       left: 5%;
+
+       .title {
+        font-size: 2rem;
+        letter-spacing: var(--mobile-title-spacing);
+      }
+      .titleName {
+        font-size: 0.8em;
+      }
+     }
+   }
+  }
+   .main {
+     .rightContent {
+       
+       .imageWrapper {
+         max-width: 300px;
+         width: 150px;
+         top: 30%;
+         left: 10%;
+         position: absolute;
+       }
+     }
+   }
+
+   .main {
+     .rightContent {
+       .occupationWrapper {
+          position: absolute;
+          top: 50%;
+          left: -95%;
+          max-width: 15rem;
+    
+         .occupationTitle {
+          font-size: 0.8em;
+
+         }
+         .occupation {
+          letter-spacing: 0;
+         }
+       }
+     }
+   }
+ }
  
  
  /* Portrait */
@@ -304,3 +391,5 @@
  /* iPad Landscape */
  @media screen and (min-device-width: 481px) and (orientation:landscape) {
  }
+
+

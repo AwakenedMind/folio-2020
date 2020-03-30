@@ -1,44 +1,41 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import styles from '../components/Index.module.scss'
-import LandingScroll from '../images/landing-scroll.svg'
-import SocialLinks from '../components/SocialLinks'
-import ProjectCard from '../components/ProjectCard'
-import Img from 'gatsby-image'
-// import Prism from "prismjs"
+import SEO from "../components/Seo"
+import { graphql } from 'gatsby'
+import { Location } from '@reach/router'
+import "../components/Layout.css"
+import Layout from '../components/Layout';
 
-const IndexPage = ({ data }) => {
-
-
+const IndexPage = (props) => {
+  console.log(props)
   return (
-    <Layout>
-      <SEO title="Home" />
-      <section className={styles.landingSection}>
-        <div className={styles.landingScrollWrapper}>
-          <img src={LandingScroll} className={styles.landingScroll} />
-        </div>
-        <p className={styles.landingCopy}>a frontend developer and designer looking for a role developing sites using <p className={styles.landingCopyReact}>ReactJS<span></span></p>
-        </p>
-        <SocialLinks text="black" />
-      </section>
-      <section className={styles.projectSection}>
-        <div className={styles.projectTitleWrapper}>
-          <h2>Projects</h2>
-        </div>
-      </section>
-      {console.log(data)}
-      <ProjectCard images={data} />
-
-      {/* <Img fluid={data.crownstudio.childImageSharp.fluid} /> */}
-    </Layout >
+    <>
+      <SEO />
+      <Layout
+        path={props.path}
+        leftTitleName={"Name"}
+        leftTitle={"Robert Arteaga"}
+        leftSubTitle={"Lets Work Together?"}
+        rightTitleName={"Occupation"}
+        rightTitle={"Frontend Developer & Designer"}
+        image={props.data.folio.childImageSharp.fluid}
+      />
+    </>
   )
 }
 
 export default IndexPage
 
-export const query = graphql`
+export const root = graphql`
   query {
+
+    dev:file(relativePath: { eq: "crownstudio.png" }) {
+      childImageSharp {
+      fixed(width: 200, height: 200) {
+        ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      }
+    }    
+  }
+
     crownstudio: file(relativePath: { eq: "crownstudio.png" }) {
       ...projectImage
     }
@@ -50,35 +47,24 @@ export const query = graphql`
     devsound: file(relativePath: { eq: "devsound.png" }) {
       ...projectImage
     }
+
+    folio: file(relativePath: { eq: "folio-img.png" }) {
+      childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }     
   }
+
+}
 `
 
 export const projectImage = graphql`
   fragment projectImage on File {
     childImageSharp {
-      fixed(width: 200, height: 200) {
-        ...GatsbyImageSharpFixed
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }
 `
-
-
-
-
-
-// const code = `const foo = 'foo';
-// const bar = 'bar';
-// console.log(foo + bar);
-// `
-
-// React.useEffect(() => {
-//   // call the highlightAll() function to style our code blocks
-//   Prism.highlightAll()
-// })
-
-{/* <div className="code-container">
-    <pre>
-      <code className="language-javascript">{code}</code>
-    </pre>
-  </div> */}
