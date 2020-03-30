@@ -54,7 +54,7 @@
 
     .occupationWrapper {
       position: absolute;
-      top: 80%;
+      top: 50%;
       left: -5%;
       max-width: 20rem;
 
@@ -66,10 +66,15 @@
       }
 
       .occupation {
-        text-transform: uppercase;
-        letter-spacing: 7px;
 
       }
+    }
+
+    .techstack {
+      position: absolute;
+      bottom: 40%;
+      right: 30%;
+      list-style-type: none;
     }
   }
 

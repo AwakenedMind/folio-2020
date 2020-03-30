@@ -118,8 +118,8 @@ export const query = graphql`
 export const projectImage = graphql`
   fragment projectImage on File {
     childImageSharp {
-      fixed(height: 400, width: 300) {
-        ...GatsbyImageSharpFixed
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }

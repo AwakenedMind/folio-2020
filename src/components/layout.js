@@ -3,8 +3,15 @@ import styles from './Layout.module.scss'
 import SocialLinks from '../components/SocialLinks'
 import Header from '../components/Header'
 import Folio from '../images/folio-img.png'
+import Devsound from '../images/devsound.png'
+import Destroygames from '../images/destroygames.png'
+import Crownstudio from '../images/crownstudio.png'
+
+import Img from 'gatsby-image'
+
 
 const Layout = (props) => {
+
   return (
     <main className={styles.main}>
       <Header route={props.path} />
@@ -20,7 +27,9 @@ const Layout = (props) => {
       </section>
       <section className={styles.rightContent}>
         <div className={styles.imageWrapper}>
+
           <img src={Folio} />
+          {/* <Img fluid={props.image} /> */}
         </div>
         <div className={styles.occupationWrapper}>
           <div className={styles.occupationTitle}>{props.rightTitleName}</div>

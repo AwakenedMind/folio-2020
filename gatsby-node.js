@@ -44,6 +44,7 @@ exports.createPages = async ({ actions }) => {
         title: `${project.title}`,
         description: `${project.description}`,
         techstack: project.stack,
+        route: project.path
       },
     })
   })
