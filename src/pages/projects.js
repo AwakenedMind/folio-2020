@@ -14,7 +14,7 @@ const Projects = (props) => {
       <div className={styles.project}>
         <div className={styles.projectContent}>
           <div className={styles.imageWrapper}>
-            <Img fixed={props.data.destroygames.childImageSharp.fixed} />
+            <Img fluid={props.data.destroygames.childImageSharp.fluid} />
             <div className={styles.projectNumber}>01</div>
           </div>
           <h2>DestroyGames</h2>
@@ -23,7 +23,7 @@ const Projects = (props) => {
       <div className={styles.project}>
         <div className={styles.projectContent}>
           <div className={styles.imageWrapper}>
-            <Img fixed={props.data.devsound.childImageSharp.fixed} />
+            <Img fluid={props.data.devsound.childImageSharp.fluid} />
             <div className={styles.projectNumber}>02</div>
           </div>
           <h2>Devsound</h2>
@@ -32,7 +32,7 @@ const Projects = (props) => {
       <div className={styles.project}>
         <div className={styles.projectContent}>
           <div className={styles.imageWrapper}>
-            <Img fixed={props.data.crownstudio.childImageSharp.fixed} />
+            <Img fluid={props.data.crownstudio.childImageSharp.fluid} />
             <div className={styles.projectNumber}>03</div>
           </div>
           <h2>CrownStudio</h2>

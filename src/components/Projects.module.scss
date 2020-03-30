@@ -66,3 +66,96 @@
         border-right: 1px solid #CAC6CF;
       }
 }
+
+
+@media all and (min-width: 1280px) and (max-width: 1440px) { 
+  .projectWrapper {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+
+    .project {
+        .projectTitle {
+          text-align: left;
+        }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .projectWrapper {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+
+    .project {
+        .projectTitle {
+          text-align: left;
+        }
+        .projectNumber {
+          font-size: 4em !important;
+        }
+      }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .projectWrapper {
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: 100%;
+    padding-top: 3rem;
+
+    .project {
+      width: 100%;
+      margin-bottom: 4rem;
+
+      .projectTitle {
+        text-align: left;
+      }
+    }
+
+    h1 {
+      padding-top: 3rem;
+      display: block;
+      position: relative !important;
+    }
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px)  { 
+  .projectWrapper {
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: 100%;
+    padding-top: 3rem;
+
+    .project {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    h1 {
+      padding-top: 3rem;
+      display: block;
+      position: relative !important;
+    }
+  }
+}
+
+@media all and (max-width: 480px)  { 
+  .projectWrapper {
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: 100%;
+    padding-top: 3rem;
+
+    .project {
+      width: 100%;
+    }
+
+    h1 {
+      padding-top: 3rem;
+      display: block;
+      position: relative !important;
+    }
+  }
+}

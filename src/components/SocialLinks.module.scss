@@ -38,3 +38,10 @@
 .darkLink {
   color: black;
 }
+
+@media all and (max-width: 480px) { 
+  .socialLinks {
+    top: 70% !important;
+    font-size: 1.1em;
+  }
+}

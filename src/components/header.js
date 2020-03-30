@@ -5,16 +5,21 @@ import styles from './Header.module.scss'
 import { Location } from '@reach/router'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const Header = (props) => (
-  <header className={styles.header}>
+const Header = (props) => {
+  console.log(props)
+  return (
+    <header className={styles.header}>
 
-    {/* {props.route === "/" ? <AniLink to={props.location.pathName} cover bg="blue" duration={0.7}>Projects</AniLink> : <AniLink to="/">Home</AniLink>} */}
-    {/* <AniLink to={"/projects/"} cover bg="blue" duration={0.7}>Home</AniLink> */}
+      {/* {props.route === "/" ? <AniLink to={props.location.pathName} cover bg="blue" duration={0.7}>Projects</AniLink> : <AniLink to="/">Home</AniLink>} */}
 
-    <h3>Work</h3>
-    {/* <AniLink fade to="/devsound">Devsound</AniLink> */}
-  </header>
-)
+      {props.route === "/" ? <Link to={props.route} cover bg="blue" duration={0.7}>Projects</Link> : <Link to="/">Home</Link>}
+
+      {/* <AniLink to={"/projects/"} cover bg="blue" duration={0.7}>Home</AniLink> */}
+
+      {/* <h3>Work</h3> */}
+      {/* <AniLink fade to="/devsound">Devsound</AniLink> */}
+    </header>)
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

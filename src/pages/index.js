@@ -44,15 +44,19 @@ const IndexPage = (props) => {
   console.log(props)
 
   return (
-    <Layout
-      path={props.location.pathName}
-      leftTitleName={"Name"}
-      leftTitle={"Robert Arteaga"}
-      leftSubTitle={"Lets Work Together?"}
-      rightTitleName={"Occupation"}
-      rightTitle={"Frontend Developer & Designer"}
-      image={props.data.folio.childImageSharp.fluid}
-    />
+
+    <>
+      <SEO />
+      <Layout
+        path={props.path}
+        leftTitleName={"Name"}
+        leftTitle={"Robert Arteaga"}
+        leftSubTitle={"Lets Work Together?"}
+        rightTitleName={"Occupation"}
+        rightTitle={"Frontend Developer & Designer"}
+        image={props.data.folio.childImageSharp.fluid}
+      />
+    </>
 
     // <main className={styles.main}>
     //   <Header route={props.location.pathname} />

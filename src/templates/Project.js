@@ -60,7 +60,12 @@ const Project = props => {
         </section>
         <section className={styles.rightContent}>
           <div className={styles.imageWrapper}>
-            <Img fluid={props.data.devsound.childImageSharp.fluid} />
+            {props.path === "/devsound" ?
+              <Img fluid={props.data.devsound.childImageSharp.fluid} />
+              : null}
+            {props.path === "/crownstudio" ?
+              <Img fluid={props.data.crownstudio.childImageSharp.fluid} /> : null}
+            {props.path === "/bookmark" ? <Img fluid={props.data.bookmark.childImageSharp.fluid} /> : null}
           </div>
           <div className={styles.occupationWrapper}>
             <div className={styles.occupationTitle}>{"Summary"}</div>

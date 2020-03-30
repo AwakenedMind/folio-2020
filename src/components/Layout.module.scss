@@ -54,7 +54,7 @@
 
     .occupationWrapper {
       position: absolute;
-      top: 80%;
+      top: 60%;
       left: -5%;
       max-width: 20rem;
 
@@ -145,6 +145,10 @@
       .imageWrapper {
         max-width: 300px;
         top: 30%;
+      }
+
+      .occupationWrapper {
+        left: -30% !important;
       }
     }
   }

@@ -11,6 +11,7 @@ import Img from 'gatsby-image'
 
 
 const Layout = (props) => {
+  console.log(props)
 
   return (
     <main className={styles.main}>
@@ -27,7 +28,6 @@ const Layout = (props) => {
       </section>
       <section className={styles.rightContent}>
         <div className={styles.imageWrapper}>
-
           <img src={Folio} />
           {/* <Img fluid={props.image} /> */}
         </div>
