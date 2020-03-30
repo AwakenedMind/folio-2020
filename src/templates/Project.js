@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout';
 import { Location } from '@reach/router'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from '../components/Project.module.scss'
 import SocialLinks from '../components/SocialLinks'
 import Header from '../components/Header'
@@ -35,17 +33,6 @@ const Project = props => {
   const generateLayout = (path) => {
 
     return (
-      // <Layout
-      //   path={props.location.pathName}
-      //   leftTitleName={"Project"}
-      //   leftTitle={props.pageContext.title}
-      //   leftSubTitle={null}
-      //   rightTitleName={"Summary"}
-      //   rightTitle={props.pageContext.description}
-      //   isProject
-      // // image={image}
-      // />
-
       <main className={styles.main}>
         <Header route={props.location.pathName} />
         <div className={styles.verticalLine}></div>
