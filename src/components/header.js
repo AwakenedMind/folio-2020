@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from './Header.module.scss'
 import { Location } from '@reach/router'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = (props) => {
   console.log(props)

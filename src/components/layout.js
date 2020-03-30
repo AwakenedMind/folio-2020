@@ -1,14 +1,8 @@
 import React from 'react'
 import styles from './Layout.module.scss'
-import SocialLinks from '../components/SocialLinks'
-import Header from '../components/Header'
+import SocialLinks from './SocialLinks'
+import Header from './Header'
 import Folio from '../images/folio-img.png'
-import Devsound from '../images/devsound.png'
-import Destroygames from '../images/destroygames.png'
-import Crownstudio from '../images/crownstudio.png'
-
-import Img from 'gatsby-image'
-
 
 const Layout = (props) => {
   console.log(props)
@@ -29,7 +23,6 @@ const Layout = (props) => {
       <section className={styles.rightContent}>
         <div className={styles.imageWrapper}>
           <img src={Folio} />
-          {/* <Img fluid={props.image} /> */}
         </div>
         <div className={styles.occupationWrapper}>
           <div className={styles.occupationTitle}>{props.rightTitleName}</div>

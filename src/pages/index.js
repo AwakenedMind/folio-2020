@@ -1,8 +1,8 @@
 import React from "react"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
-import "../components/layout.css"
+import "../components/Layout.css"
 import Layout from '../components/Layout';
 
 const IndexPage = (props) => {
@@ -25,7 +25,7 @@ const IndexPage = (props) => {
 
 export default IndexPage
 
-export const query = graphql`
+export const root = graphql`
   query {
 
     dev:file(relativePath: { eq: "crownstudio.png" }) {
