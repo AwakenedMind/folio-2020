@@ -58,8 +58,8 @@
 
     .occupationWrapper {
       position: absolute;
-      top: 50%;
-      left: -5%;
+      top: 55%;
+      left: 5%;
       max-width: 20rem;
 
       .occupationTitle {
@@ -81,7 +81,7 @@
 
     .techstack {
       position: absolute;
-      bottom: 20%;
+      bottom: 30%;
       right: 50%;
       list-style-type: none;
     }
@@ -160,6 +160,14 @@
       .imageWrapper {
         max-width: 300px;
         top: 30%;
+      }
+
+      .occupationWrapper {
+        top: 65% !important;
+      }
+
+      .techstack {
+        bottom: 0 !important;
       }
     }
   }
