@@ -8,15 +8,7 @@ const Header = (props) => {
   console.log(props)
   return (
     <header className={styles.header}>
-
-      {/* {props.route === "/" ? <AniLink to={props.location.pathName} cover bg="blue" duration={0.7}>Projects</AniLink> : <AniLink to="/">Home</AniLink>} */}
-
-      {props.route === "/" ? <Link to={props.route}>Projects</Link> : <Link to="/">Home</Link>}
-
-      {/* <AniLink to={"/projects/"} cover bg="blue" duration={0.7}>Home</AniLink> */}
-
-      {/* <h3>Work</h3> */}
-      {/* <AniLink fade to="/devsound">Devsound</AniLink> */}
+      {props.route === "/" ? <Link to="projects">Projects</Link> : <Link to="/">Home</Link>}
     </header>)
 }
 

@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './SocialLinks.module.scss'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const SocialLinks = (props) => {
 
   var links = [
-    { endpoint: 'githublink', text: "Github" },
-    { endpoint: "linkedin", text: "LinkedIn" },
-    { endpoint: "https://codepen.io/chantel-sky/pens/showcase", text: "Twitter" }
+    { endpoint: 'https://github.com/AwakenedMind', text: "Github" },
+    { endpoint: "https://www.linkedin.com/in/robert-arteaga-a3ab89127/", text: "LinkedIn" },
+    { endpoint: "https://twitter.com/RobArteaga4", text: "Twitter" }
   ];
 
   const lightLink = (link) => {

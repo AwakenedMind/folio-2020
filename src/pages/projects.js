@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styles from '../components/Projects.module.scss'
 import Img from 'gatsby-image'
+import Header from '../components/Header'
 
 /*
   bookmark october 11 2019
@@ -10,36 +11,45 @@ import Img from 'gatsby-image'
 
 const Projects = (props) => {
   return (
-    <div className={styles.projectWrapper}>
-      <div className={styles.project}>
-        <div className={styles.projectContent}>
-          <div className={styles.imageWrapper}>
-            <Img fluid={props.data.destroygames.childImageSharp.fluid} />
-            <div className={styles.projectNumber}>01</div>
+    <>
+      <Header />
+      <div className={styles.projectWrapper}>
+        <Link to="/destroygames">
+          <div className={styles.project}>
+            <div className={styles.projectContent}>
+              <div className={styles.imageWrapper}>
+                <Img fluid={props.data.destroygames.childImageSharp.fluid} />
+                <div className={styles.projectNumber}>01</div>
+              </div>
+              <h2>DestroyGames</h2>
+            </div>
           </div>
-          <h2>DestroyGames</h2>
-        </div>
-      </div>
-      <div className={styles.project}>
-        <div className={styles.projectContent}>
-          <div className={styles.imageWrapper}>
-            <Img fluid={props.data.devsound.childImageSharp.fluid} />
-            <div className={styles.projectNumber}>02</div>
+        </Link>
+        <Link to="/devsound">
+          <div className={styles.project}>
+            <div className={styles.projectContent}>
+              <div className={styles.imageWrapper}>
+                <Img fluid={props.data.devsound.childImageSharp.fluid} />
+                <div className={styles.projectNumber}>02</div>
+              </div>
+              <h2>Devsound</h2>
+            </div>
           </div>
-          <h2>Devsound</h2>
-        </div>
-      </div>
-      <div className={styles.project}>
-        <div className={styles.projectContent}>
-          <div className={styles.imageWrapper}>
-            <Img fluid={props.data.crownstudio.childImageSharp.fluid} />
-            <div className={styles.projectNumber}>03</div>
+        </Link>
+        <Link to="crownstudio">
+          <div className={styles.project}>
+            <div className={styles.projectContent}>
+              <div className={styles.imageWrapper}>
+                <Img fluid={props.data.crownstudio.childImageSharp.fluid} />
+                <div className={styles.projectNumber}>03</div>
+              </div>
+              <h2>CrownStudio</h2>
+            </div>
           </div>
-          <h2>CrownStudio</h2>
-        </div>
+        </Link>
+        <h1 className={styles.projectTitle}>Projects</h1>
       </div>
-      <h1 className={styles.projectTitle}>Projects</h1>
-    </div>
+    </>
   )
 }
 

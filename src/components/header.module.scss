@@ -1,9 +1,9 @@
 .header {
   width: 100%;
   background: white;
-  height: 5rem;
+  height: 4rem;
   display: flex;
-  position: fixed;
+  position: absolute;
 
   h3 {
     font-size: 1.4em;
@@ -15,10 +15,10 @@
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 2em;
     font-weight: 200;
     letter-spacing: 2px;
-
+    z-index: 3;
     padding-top: 1rem;
     padding-left: 1rem;
   }
@@ -70,3 +70,12 @@
   }
   
 }
+
+@media all and (max-width: 480px) { 
+
+  .header {
+    a {
+      font-size: 1.2em;
+    }
+  }
+ }

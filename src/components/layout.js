@@ -18,7 +18,11 @@ const Layout = (props) => {
           <h1 className={styles.title}>{props.leftTitle}</h1>
           <h4 className={styles.subTitle}>{props.leftsubTitle}</h4>
         </div>
-        <h5 className={styles.availForHire}>Available For Hire</h5>
+        <h5 className={styles.availForHire}>
+          <a href="mailto:html5engineer@gmail.com?subject=Enquiry">
+            Available For Hire
+        </a>
+        </h5>
       </section>
       <section className={styles.rightContent}>
         <div className={styles.imageWrapper}>
