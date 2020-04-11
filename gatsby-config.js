@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Robert Arteaga | Freelance ReactJS Web Developer in the Greater Los Angeles Area  `,
-    description: `Robert Arteaga is an accredited HTML5 Engineer with superb ReactJS Skills. With hundreds of referrals from around the world. His freelance rate starts at 10k USD. `,
+    description: `Robert Arteaga is a Fullstack Developer with SEO & Design Experience. Currently seeking a full-time position or freelance work as of April 2020`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
-        name: 'images',
+        name: "images",
       },
     },
     {

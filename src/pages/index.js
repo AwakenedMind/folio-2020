@@ -1,15 +1,15 @@
 import React from "react"
 import SEO from "../components/Seo"
-import { graphql } from 'gatsby'
-import { Location } from '@reach/router'
+import { graphql } from "gatsby"
+import { Location } from "@reach/router"
 import "../components/Layout.css"
-import Layout from '../components/Layout';
+import Layout from "../components/Layout"
 
-const IndexPage = (props) => {
+const IndexPage = props => {
   console.log(props)
   return (
     <>
-      <SEO />
+      <SEO title="Robert Arteaga | ReactJS Developer Based in Los Angeles area" />
       <Layout
         path={props.path}
         leftTitleName={"Name"}
@@ -27,14 +27,13 @@ export default IndexPage
 
 export const root = graphql`
   query {
-
-    dev:file(relativePath: { eq: "crownstudio.png" }) {
+    dev: file(relativePath: { eq: "crownstudio.png" }) {
       childImageSharp {
-      fixed(width: 200, height: 200) {
-        ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        }
       }
-    }    
-  }
+    }
 
     crownstudio: file(relativePath: { eq: "crownstudio.png" }) {
       ...projectImage
@@ -50,13 +49,12 @@ export const root = graphql`
 
     folio: file(relativePath: { eq: "folio-img.png" }) {
       childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
-    }     
+    }
   }
-
-}
 `
 
 export const projectImage = graphql`
