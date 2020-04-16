@@ -59,13 +59,15 @@
     .occupationWrapper {
       position: absolute;
       top: 55%;
-      left: 5%;
+      left: -45%;
       max-width: 20rem;
 
       .occupationTitle {
         color: var(--title-gray);
         text-transform: uppercase;
         font-family: rz-regular;
+        padding-bottom: 0.35rem;
+
 
       }
 
@@ -81,9 +83,29 @@
 
     .techstack {
       position: absolute;
-      bottom: 30%;
+      bottom: 10%;
       right: 50%;
-      list-style-type: none;
+
+      h3 {
+        padding: 0;
+        color: var(--title-gray);
+        text-transform: uppercase;
+        font-family: rz-regular;
+        font-size: 1em;
+        padding-bottom: 0.35rem;
+        font-weight: 300;
+      }
+      
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+          color: rgba(0, 0, 0, 0.8);
+        }
+      }
+
     }
 
   }
@@ -104,6 +126,8 @@
         text-transform: uppercase;
         color: var(--title-gray);
         font-size: 1em;
+        padding-bottom: 0.35rem;
+
       }
       
       .title {
@@ -211,7 +235,7 @@
   .main {
     .leftContent {
      .titleWrapper {
-       right: -30% !important;
+       right: -40% !important;
        left: 5%;
        z-index: 2;
 
@@ -316,6 +340,11 @@
       height: 80%;
     }
     .leftContent {
+
+      .titleWrapper {
+        width: 100%;
+      }
+
      .titleWrapper {
        right: -50% !important;
        z-index: 2;
@@ -346,6 +375,10 @@
 
    .main {
      .rightContent {
+
+      .techstack {
+        display: none;
+      }
        .occupationWrapper {
           position: absolute;
           top: 50%;

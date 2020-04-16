@@ -16,7 +16,7 @@ const IndexPage = props => {
         leftTitle={"Robert Arteaga"}
         leftSubTitle={"Lets Work Together?"}
         rightTitleName={"Occupation"}
-        rightTitle={"Frontend Developer & Designer"}
+        rightTitle={"Fullstack Developer & Designer"}
         image={props.data.folio.childImageSharp.fluid}
       />
     </>

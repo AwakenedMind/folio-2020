@@ -51,18 +51,24 @@ const Project = props => {
               <Img fluid={props.data.devsound.childImageSharp.fluid} />
               : null}
             {props.path === "/crownstudio" ?
-              <Img fluid={props.data.crownstudio.childImageSharp.fluid} /> : null}
-            {props.path === "/bookmark" ? <Img fluid={props.data.bookmark.childImageSharp.fluid} /> : null}
+              <Img fluid={props.data.crownstudio.childImageSharp.fluid} alt="crownstudio" /> : null}
+            {props.path === "/destroygames" 
+            ? (<a href="https://destroygames.com"><Img fluid={props.data.destroygames.childImageSharp.fluid} alt="destroygames" /></a>) 
+            : null}
           </div>
           <div className={styles.occupationWrapper}>
             <div className={styles.occupationTitle}>{"Summary"}</div>
             <div className={styles.occupation}>{props.pageContext.description}</div>
           </div>
-          <ul className={styles.techstack}>
+          <div className={styles.techstack}>
+            <h3 className={styles.occupationTitle}>Techstack</h3>
+          <ul>
             {props.pageContext.techstack.map(stack => {
               return (<li>{stack}</li>)
             })}
           </ul>
+
+          </div>
         </section>
         <SocialLinks />
       </main>
