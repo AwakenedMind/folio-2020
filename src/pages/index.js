@@ -5,7 +5,7 @@ import { Location } from "@reach/router"
 import "../components/Layout.css"
 import Layout from "../components/Layout"
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   console.log(props)
   return (
     <>
@@ -16,7 +16,7 @@ const IndexPage = props => {
         leftTitle={"Robert Arteaga"}
         leftSubTitle={"Lets Work Together?"}
         rightTitleName={"Occupation"}
-        rightTitle={"Fullstack Developer & Designer"}
+        rightTitle={"Frontend Developer"}
         image={props.data.folio.childImageSharp.fluid}
       />
     </>
